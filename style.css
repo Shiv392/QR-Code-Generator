@@ -1,0 +1,90 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+font-family: 'Poppins', sans-serif;
+
+}
+
+ body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(227,123,225,1) 0%, rgba(235,60,220,1) 0%, rgba(0,212,255,1) 87%);
+ }
+ .wrapper{
+    height: 280px;
+    max-width: 410px;
+    background-color: #ffffff;
+    padding:30px;
+    border-radius: 10px;
+    transition: height 0.4s ease;
+ }
+ .wrapper.active{
+    height: 500px;
+ }
+ .wrapper h1{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.9;
+    font-family: serif;
+ }
+ .wrapper p{
+    font-size: 15px;
+    color: gray;
+    text-align: center;
+}
+ .wrapper .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+ }
+ .form input{
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    border:none;
+    outline: none;
+    border: 1px solid black;
+ }
+ .form button{
+    width: 100%;
+    /* background: red; */
+    color: #ffffff;
+    font-size: 18px;
+    
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 36%, rgba(253,29,29,1) 100%, rgba(252,176,69,1) 100%);
+ }
+ .form button:focus{
+    box-shadow: none;
+    color: #ffffff;
+ }
+ .form button:hover{
+    color:#ffffff;
+ }
+ .wrapper .qr-code{
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    /* border: 1px solid black; */
+    margin-top: 30px;
+    box-shadow: 0 0 4px black;
+ }
+ .wrapper.active .qr-code{
+    opacity: 1;
+    transition: opacity 1s 0.05s ease;
+    
+    pointer-events: auto;
+ }
